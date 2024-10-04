@@ -1,0 +1,18 @@
+package sample01;
+
+//공통관심사항
+public class LoggingAdvice {
+	
+	public void beforeTrace() {
+		System.out.println("before trace");
+	}
+	
+	public void afterTrace() {
+		System.out.println("after trace");
+	}
+	
+	public void Trace() {
+		System.out.println("입실");
+		System.out.println("퇴실");
+	}
+}

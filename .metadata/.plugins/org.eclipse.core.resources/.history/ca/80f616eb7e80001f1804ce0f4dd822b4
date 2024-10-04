@@ -1,0 +1,6 @@
+package sample04;
+
+@Component
+public interface SungJuk {
+	public void execute();
+}

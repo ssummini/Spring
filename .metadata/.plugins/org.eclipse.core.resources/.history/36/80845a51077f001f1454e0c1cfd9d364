@@ -1,0 +1,16 @@
+package sample02;
+
+public class CalcAdd implements Calc {
+	private int x = 25;
+	private int y = 36;
+	
+	public CalcAdd() {
+		System.out.println("CalcAdd 기본 생성자");
+	}
+	@Override
+	public void calc(int x, int y) {
+		
+		System.out.println(x + " + " + y + " = " + (x+y));
+		
+	}
+}

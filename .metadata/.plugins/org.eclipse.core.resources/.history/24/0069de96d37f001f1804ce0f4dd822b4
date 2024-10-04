@@ -1,0 +1,52 @@
+package sample04;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class HelloSpring {
+    private List<SungJukDTO2> list = new ArrayList<SungJukDTO2>();    
+    Scanner scan = new Scanner(System.in);
+    int num = 0;
+    SungJuk sungJuk = null;
+
+    // 무한 루프를 돌리면서 메뉴를 출력
+    public void menu() {
+        while (true) {  // 무한 루프
+            System.out.println("**************");
+            System.out.println("1. 입력");
+            System.out.println("2. 출력");
+            System.out.println("3. 수정");
+            System.out.println("4. 삭제");
+            System.out.println("5. 끝");
+            System.out.println("**************");
+            System.out.print("번호 : ");
+            num = scan.nextInt();
+            System.out.println();
+            
+            if (num == 5) {
+                System.out.println("프로그램을 종료합니다.");
+                break; // 5번 입력 시 루프 종료
+            } else if (num == 1)
+                sungJuk = new SungJukInput();
+            else if (num == 2)
+                sungJuk = new SungJukOutput();                
+            else if (num == 3)
+                sungJuk = new SungJukUpdate();                
+            else if (num == 4)
+                sungJuk = new SungJukDelete();    
+            else {
+                System.out.println("잘못된 입력입니다. 다시 선택해주세요.");
+                continue;  // 유효하지 않은 입력 시 다시 메뉴로 돌아가기
+            }
+
+            // 유효한 메뉴 선택에 따라 실행
+            sungJuk.execute(list);
+        }
+    }
+
+    public static void main(String[] args) {
+        HelloSpring app = new HelloSpring();
+        app.menu();  // 메뉴 실행
+    }
+}

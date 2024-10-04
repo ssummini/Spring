@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<typeInfoHistroy>
+    <typeInfo handle="=Chapter01_XML/src=/optional=/true=/=/maven.pomderived=/true=/&lt;sample01{MessageBean.java[MessageBean" modifiers="513" timestamp="1727681409454"/>
+    <typeInfo handle="=Chapter01_XML/src=/optional=/true=/=/maven.pomderived=/true=/&lt;sample02{Calc.java[Calc" modifiers="513" timestamp="1727744480253"/>
+    <typeInfo handle="=Chapter01_XML/src=/optional=/true=/=/maven.pomderived=/true=/&lt;sample03{SungJuk.java[SungJuk" modifiers="513" timestamp="1727686530269"/>
+    <typeInfo handle="=Chapter01_XML/C:\/Program Files\/Java\/jdk-17\/lib\/jrt-fs.jar`java.base=/module=/true=/=/maven.pomderived=/true=/&lt;java.util.concurrent(Flow$Subscription.class[Subscription" modifiers="1545" timestamp="1719987642642"/>
+    <typeInfo handle="=Chapter02_XML/src=/optional=/true=/=/maven.pomderived=/true=/&lt;sample02{Calc.java[Calc" modifiers="513" timestamp="1727759696305"/>
+    <typeInfo handle="=Chapter02_XML/src=/optional=/true=/=/maven.pomderived=/true=/&lt;sample03{SungJuk.java[SungJuk" modifiers="513" timestamp="1727764334498"/>
+    <typeInfo handle="=Chapter02_XML/C:\/Users\/bitcamp\/.m2\/repository\/org\/springframework\/spring-core\/5.3.37\/spring-core-5.3.37.jar=/maven.pomderived=/true=/=/maven.pomderived=/true=/=/maven.groupId=/org.springframework=/=/maven.artifactId=/spring-core=/=/maven.version=/5.3.37=/=/maven.scope=/compile=/&lt;org.springframework.util.concurrent(SuccessCallback.class[SuccessCallback" modifiers="1537" timestamp="1727679706479"/>
+    <typeInfo handle="=Chapter02_XML/src=/optional=/true=/=/maven.pomderived=/true=/&lt;sample04{SungJuk.java[SungJuk" modifiers="513" timestamp="1727835996086"/>
+    <typeInfo handle="=Chapter02_XML/src=/optional=/true=/=/maven.pomderived=/true=/&lt;sample01{MessageBean.java[MessageBean" modifiers="513" timestamp="1727750898683"/>
+    <typeInfo handle="=Chapter02_XML/src=/optional=/true=/=/maven.pomderived=/true=/&lt;sample05{Outputter.java[Outputter" modifiers="513" timestamp="1727851048942"/>
+    <typeInfo handle="=Chapter02_XML/src=/optional=/true=/=/maven.pomderived=/true=/&lt;sample05{MessageBean.java[MessageBean" modifiers="513" timestamp="1727850572574"/>
+    <typeInfo handle="=Chapter03_XML/src=/optional=/true=/=/maven.pomderived=/true=/&lt;sample01{MessageBean.java[MessageBean" modifiers="513" timestamp="1728012350573"/>
+    <typeInfo handle="=Chapter04_XML/C:\/Program Files\/Java\/jdk-17\/lib\/jrt-fs.jar`java.base=/module=/true=/=/maven.pomderived=/true=/&lt;java.nio.file.attribute(UserDefinedFileAttributeView.class[UserDefinedFileAttributeView" modifiers="1537" timestamp="1719987642642"/>
+    <typeInfo handle="=Chapter04_XML/src=/optional=/true=/=/maven.pomderived=/true=/&lt;user.service{UserService.java[UserService" modifiers="513" timestamp="1728024675031"/>
+    <typeInfo handle="=Chapter04_XML/src=/optional=/true=/=/maven.pomderived=/true=/&lt;user.dao{UserDAO.java[UserDAO" modifiers="513" timestamp="1728027954005"/>
+</typeInfoHistroy>

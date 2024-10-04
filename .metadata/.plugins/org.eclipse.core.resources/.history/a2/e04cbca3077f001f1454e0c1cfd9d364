@@ -1,0 +1,10 @@
+package sample02;
+
+public class HelloSpring {
+
+	public static void main(String[] args) {
+		Calc calc = new CalcAdd();
+		calc.calc(25, 36);
+	}
+
+}

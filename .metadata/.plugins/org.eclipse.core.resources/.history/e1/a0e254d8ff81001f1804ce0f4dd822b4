@@ -1,0 +1,25 @@
+package sample01;
+
+import org.aspectj.lang.ProceedingJoinPoint;
+
+//공통관심사항
+public class LoggingAdvice {
+	
+	public void beforeTrace() {
+		System.out.println("before trace");
+	}
+	
+	public void afterTrace() {
+		System.out.println("after trace");
+	}
+	
+	public void trace(ProceedingJoinPoint joinPoint) throws Throwable {
+		/*
+		System.out.println("입실");
+		
+		joinPoint.proceed();//핵심코드를 수행하는 메소드를 호출한다.
+		
+		System.out.println("퇴실");
+		*/
+	}
+}

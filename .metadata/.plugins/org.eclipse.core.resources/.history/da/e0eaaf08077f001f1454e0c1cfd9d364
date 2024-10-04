@@ -1,0 +1,9 @@
+package sample02;
+
+public class CalcAdd implements Calc {
+	@Override
+	public void calc(int x, int y) {
+		// TODO Auto-generated method stub
+		
+	}
+}

@@ -1,0 +1,52 @@
+package sample04;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class HelloSpring {
+	private List<SungJukDTO2> list = new ArrayList<SungJukDTO2>();   
+	Scanner scan = new Scanner(System.in);
+	private SungJuk sungJuk; 
+	int num = 0;
+	public void setSungJuk(SungJuk sungJuk) {
+        this.sungJuk = sungJuk;
+    }
+    public void menu() {
+        while (true) { 
+            System.out.println("**************");
+            System.out.println("1. 입력");
+            System.out.println("2. 출력");
+            System.out.println("3. 수정");
+            System.out.println("4. 삭제");
+            System.out.println("5. 끝");
+            System.out.println("**************");
+            System.out.print("번호 : ");
+            num = scan.nextInt();
+            System.out.println();
+            
+            if (num == 5) {
+                System.out.println("프로그램을 종료합니다.");
+                break; // 5번 입력 시 루프 종료
+            } else if (num == 1)
+                sungJuk = new SungJukInput();
+            else if (num == 2)
+                sungJuk = new SungJukOutput();                
+            else if (num == 3)
+                sungJuk = new SungJukUpdate();                
+            else if (num == 4)
+                sungJuk = new SungJukDelete();    
+
+            sungJuk.execute(list);
+        }
+    }
+
+    public static void main(String[] args) {
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+        SungJuk sungJuk = (SungJuk) context.getBean("sungJuk");
+        sungJuk.menu();
+    }
+}

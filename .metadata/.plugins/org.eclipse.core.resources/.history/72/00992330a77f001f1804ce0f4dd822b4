@@ -1,0 +1,14 @@
+package spring.conf;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+
+import sample01.MessageBeanImpl;
+
+@Configuration
+public class SpringConfiguration {
+	@Bean
+	public ? 메서드(){
+		return new MessageBeanImpl("사과");
+	}
+}

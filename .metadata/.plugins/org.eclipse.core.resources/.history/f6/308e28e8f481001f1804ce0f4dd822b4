@@ -1,0 +1,29 @@
+package sample01;
+
+public class MessageBeanImpl implements MessageBean {
+	private String str;
+	
+	
+	public void setStr(String str) {
+		this.str = str;
+	}
+
+	@Override
+	public void showPrintBefore() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void viewPrintBefore() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void display() {
+		// TODO Auto-generated method stub
+
+	}
+
+}

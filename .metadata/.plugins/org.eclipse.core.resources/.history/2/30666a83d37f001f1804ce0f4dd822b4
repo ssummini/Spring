@@ -1,0 +1,49 @@
+package sample04;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+public class HelloSpring {
+	private List<SungJukDTO2> list = new ArrayList<SungJukDTO2>();	
+	Scanner scan = new Scanner(System.in);
+	int num = 0;
+	SungJuk sungJuk = null;
+	
+	public void menu() {
+		System.out.println("**************");
+		System.out.println("1. 입력");
+		System.out.println("2. 출력");
+		System.out.println("3. 수정");
+		System.out.println("4. 삭제");
+		System.out.println("5. 끝");
+		System.out.println("**************");
+		System.out.print("번호 : ");
+		num = scan.nextInt();
+		System.out.println();
+		
+		if(num == 5)
+			break;
+		else if(num == 1)
+			sungJuk = new SungJukInput();
+		else if(num == 2) 
+			sungJuk = new SungJukOutput();				
+		else if(num == 3) 
+			sungJuk = new SungJukUpdate();				
+		else if(num == 4) 
+			sungJuk = new SungJukDelete();	
+		else {
+			System.out.println("1~5중에 선택하세요");
+			System.out.println();
+			continue;
+		}
+		sungJuk.execute(list);
+	}
+	
+	public static void main(String[] args) {
+
+		
+
+	}
+
+}

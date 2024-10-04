@@ -1,0 +1,19 @@
+package sample01;
+
+public class MessageBeanKo implements MessageBean {
+	private int num; //필드, 초기화되어있으므로 0으로 잡힌다.
+	private int x = 25;
+	private int y = 36;
+	
+	public MessageBeanKo() {
+		System.out.println("MessageBeanKo 기본 생성자");
+	}
+	@Override
+	public void sayHello(String name) {
+		num++;
+		
+		System.out.println("num = " + num);
+		System.out.println("안녕하세요 " + name);			
+	}
+
+}

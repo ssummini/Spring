@@ -1,0 +1,18 @@
+package sample04;
+
+import java.util.List;
+import java.util.Scanner;
+
+public class SungJukDelete implements SungJuk {
+
+	@Override
+	public void execute(List<SungJukDTO2> list) {
+		Scanner scan = new Scanner(System.in);
+		String name;
+
+		System.out.print("삭제할 이름 입력 : ");
+		name = scan.next();
+
+	}
+
+}

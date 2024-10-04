@@ -1,0 +1,44 @@
+package user.dao.impl;
+
+import java.util.List;
+
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+
+import user.bean.UserDTO;
+import user.dao.UserDAO;
+
+public class UserDAOImpl implements UserDAO {
+	private JdbcTemplate jdbcTemplate = null;
+	
+	public void setJdbcTemplate(JdbcTemplate jdbcTemplate) {
+		this.jdbcTemplate = jdbcTemplate;
+	}
+
+	@Override
+	public void write(UserDTO userDTO) {
+		String sql = "insert into usertable values(?,?,?)";
+		jdbcTemplate.update(sql, userDTO.getName(), userDTO.getId(), userDTO.getPwd()); //insert, update, delete
+		
+	}
+
+	@Override
+	public List<UserDTO> getUserList() {
+		String sql = "select * from usertable";
+		return jdbcTemplate.query(sql, new BeanPropertyRowMapper<UserDTO>(UserDTO.class));
+	}
+
+	@Override
+	public void update(UserDTO userDTO) {
+		String sql = "update usertable set name=?, pwd=? where id=?";
+		jdbcTemplate.update(sql, userDTO.getName(), userDTO.getPwd(), userDTO.getId());
+		
+	}
+
+	@Override
+	public void delete(UserDTO userDTO) {
+		String sql = "delete usertable where id=?";
+		jdbcTemplate.update(sql, userDTO.getId());
+	}
+	
+}

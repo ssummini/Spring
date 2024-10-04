@@ -1,0 +1,25 @@
+package sample05;
+
+import sample01.MessageBean;
+
+public class MessageBeanImpl implements MessageBean {
+
+	@Override
+	public void sayHello() {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void sayHello(String fruit, int cost) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void sayHello(String fruit, int cost, int qty) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,40 @@
+package user.service;
+
+import java.util.Iterator;
+import java.util.List;
+import java.util.Scanner;
+
+import lombok.Setter;
+import user.bean.UserDTO;
+import user.dao.UserDAO;
+
+public class UserDeleteService implements UserService {
+	@Setter
+	private UserDAO userDAO;
+	@Override
+	public void execute() {
+		System.out.println();
+		Scanner scan = new Scanner(System.in);	
+		
+		System.out.print("삭제할 아이디 입력 : ");
+		String id = scan.next();
+
+		List<UserDTO> list = userDAO.getUserList();
+		
+		Iterator<UserDTO> it = list.iterator();
+        int sw = 0;
+        
+        while (it.hasNext()) { // 항목이 있으면 true, 없으면 false
+        	
+            //it가 가리키는 항목을 꺼내서 저장하고, it는 다음항목으로 이동
+        	UserDTO userDTO = it.next();
+            if (userDTO.getId().equals(id)) {
+            	sw = 1;
+                it.remove(); //it.next로 저장한 항목을 제거
+                System.out.println(userDTO.getName() + "님의 데이터를 삭제하였습니다.");
+                break;
+            }
+        }
+	}
+
+}

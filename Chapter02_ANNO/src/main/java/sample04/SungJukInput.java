@@ -1,0 +1,54 @@
+package sample04;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
+
+@Component
+@Scope("prototype")
+public class SungJukInput implements SungJuk {
+	@Autowired
+	private SungJukDTO2 sungJukDTO2 = null;
+	@Autowired
+
+	@Qualifier("arrayList")
+	private List<SungJukDTO2> list;
+
+	@Override
+	public void execute() {
+		Scanner scan = new Scanner(System.in);
+		
+		System.out.print("이름 입력 : ");
+		String name= scan.next();
+		
+        // 같은 이름이 있는지 확인
+        for (SungJukDTO2 dto : list) {
+            if (dto.getName().equals(name)) {
+                System.out.println("이미 존재하는 이름입니다.");
+                return;
+            }
+        }
+        
+		sungJukDTO2.setName(name);
+		
+		System.out.print("국어점수 입력 : ");
+		sungJukDTO2.setKor(scan.nextInt());
+		
+		System.out.print("영어점수 입력 : ");
+		sungJukDTO2.setEng(scan.nextInt());
+		
+		System.out.print("수학점수 입력 : ");
+		sungJukDTO2.setMath(scan.nextInt());
+		
+		sungJukDTO2.cal(); 
+
+        list.add(sungJukDTO2);
+        System.out.println(name + "님의 데이터를 입력하였습니다.");
+	}
+
+}

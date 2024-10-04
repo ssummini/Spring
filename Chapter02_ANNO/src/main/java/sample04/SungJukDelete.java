@@ -1,0 +1,43 @@
+package sample04;
+
+import java.util.List;
+import java.util.Scanner;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
+
+import java.util.Iterator;
+
+@Component
+public class SungJukDelete implements SungJuk {
+	@Autowired
+	@Qualifier("arrayList")
+	private List<SungJukDTO2> list;
+
+	@Override
+    public void execute() {
+        Scanner scan = new Scanner(System.in);
+        System.out.print("삭제할 이름 입력 : ");
+        String name = scan.next();
+
+        Iterator<SungJukDTO2> it = list.iterator();
+        int sw = 0;
+
+        while (it.hasNext()) { // 항목이 있으면 true, 없으면 false
+        	
+            //it가 가리키는 항목을 꺼내서 저장하고, it는 다음항목으로 이동
+        	SungJukDTO2 sungJukDTO2 = it.next();
+            if (sungJukDTO2.getName().equals(name)) {
+            	sw = 1;
+                it.remove(); //it.next로 저장한 항목을 제거
+                System.out.println(name + "님의 데이터를 삭제하였습니다.");
+                break;
+            }
+        }
+
+        if (sw == 0) {
+            System.out.println("해당 이름이 존재하지 않습니다.");
+        }
+    }
+}
