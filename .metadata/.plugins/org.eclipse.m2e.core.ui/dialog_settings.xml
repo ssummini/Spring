@@ -2,6 +2,9 @@
 <section name="Workbench">
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="Chapter06_1"/>
+			<item value="Chapter06"/>
+			<item value="Chapter05_XML"/>
 			<item value="Chapter04_XML"/>
 			<item value="Chapter03_XML"/>
 			<item value="Chapter02_XML"/>
@@ -10,6 +13,9 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="Chapter06_1"/>
+			<item value="Chapter06"/>
+			<item value="Chapter05_XML"/>
 			<item value="Chapter04_XML"/>
 			<item value="Chapter03_XML"/>
 			<item value="Chapter02_XML"/>
@@ -33,6 +39,7 @@
 	</section>
 	<section name="MavenProjectWizardLocationPage">
 		<list key="location">
+			<item value="D:\Spring\workspace\Chapter05_XML\src\spring\applicationContext.xml"/>
 			<item value="D:\Spring\workspace\Chapter03_XML\pom.xml"/>
 			<item value="D:\Spring\workspace\Chapter03_XML"/>
 			<item value="D:\Spring\workspace\Chapter01_XML"/>
@@ -47,6 +54,7 @@
 		</list>
 	</section>
 	<section name="MavenProjectWizardArchetypePage">
+		<item key="catalog" value="All Catalogs"/>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>
 			<item value="[artifactId]-TRUNK"/>
@@ -77,6 +85,7 @@
 	</section>
 	<section name="MavenProjectWizardArtifactPage">
 		<list key="groupId">
+			<item value="Chapter05_ANNO"/>
 			<item value="Chapter04_ANNO"/>
 			<item value="Chapter03_ANNO"/>
 			<item value="Chapter02_ANNO"/>
@@ -85,6 +94,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="Chapter05_ANNO"/>
 			<item value="Chapter04_ANNO"/>
 			<item value="Chapter03_ANNO"/>
 			<item value="Chapter02_ANNO"/>

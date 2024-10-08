@@ -37,31 +37,34 @@
 	</bean>	
 	
 	<bean id="helloSpring" class="user.main.HelloSpring"></bean>
-	<bean id="userInsert" class="user.service.UserInsertService" scope="prototype">
+	<bean id="userInsertService" class="user.service.UserInsertService" scope="prototype">
 		<property name="userDTO" ref="userDTO" />
 		<property name="userDAO" ref="userDAOImpl" />
 	</bean> 
 	
-	<bean id="userSelect" class="user.service.UserSelectService">
+	<bean id="userSelectService" class="user.service.UserSelectService">
 		<property name="userDAO" ref="userDAOImpl" />
 	</bean>
 	
-	<bean id="userUpdate" class="user.service.UserUpdateService">
+	<bean id="userUpdateService" class="user.service.UserUpdateService">
 		<property name="userDTO" ref="userDTO" />
 		<property name="userDAO" ref="userDAOImpl" />
 	</bean>
 	
-	<bean id="userDelete" class="user.service.UserDeleteService">
+	<bean id="userDeleteService" class="user.service.UserDeleteService">
 		<property name="userDAO" ref="userDAOImpl" />
 	</bean>
 	
 	<bean id="userDTO" class="user.bean.UserDTO" scope="prototype"></bean>
 	
 	<bean id="userDAOImpl" class="user.dao.impl.UserDAOImpl">
-		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+		<!--<property name="jdbcTemplate" ref="jdbcTemplate"></property>  -->
+		<property name="dataSource" ref="dataSource"></property>
 	</bean>
 	
+	<!-- 
 	<bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
 		<constructor-arg ref="dataSource"></constructor-arg>
 	</bean>
+	 -->
 </beans> 
